@@ -14,7 +14,7 @@ spec:
       annotations:
         autoscaling.knative.dev/minScale: "1"
         boot.spring.io/actuator: http://:8081/actuator
-        boot.spring.io/version: 2.7.1
+        boot.spring.io/version: 2.7.3
         conventions.apps.tanzu.vmware.com/applied-conventions: |-
           spring-boot-convention/spring-boot
           spring-boot-convention/spring-boot-graceful-shutdown
@@ -42,7 +42,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: us-central1-docker.pkg.dev/fe-asaikali/explore/apps/tanzu-java-web-app-dev@sha256:a3e1a6b9925e55a7d8ee98000862b0a2b45a8a59f64bc750e71722eb8e2d52d0
+        image: us-central1-docker.pkg.dev/fe-asaikali/explore/apps/tanzu-java-web-app-dev@sha256:839b01f64a21a14c25ffcd8b186a356445b4c457c4846a9c1eecf3b9163162d1
         livenessProbe:
           httpGet:
             path: /livez
